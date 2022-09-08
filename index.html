@@ -30,7 +30,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span class="btm-nav-label">Shopping with JS</span>
+                <a href="http://127.0.0.1:5500/index.html"><span class="btm-nav-label">Shopping with JS</span></a>
             </button>
             <button class="bg-teal-200 text-teal-600">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -43,9 +43,9 @@
         </div>
     </header>
     <section class="w-9/12 mx-auto pb-40">
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-2 gap-4 divide-x">
             <div>
-                <h2>All products</h2>
+                <h1 class="text-center text-4xl pb-4">All products</h1>
                 <div class="grid grid-cols-2 gap-4">
                     <!-- Product 1 -->
                     <div>
@@ -55,7 +55,7 @@
                                 <h2 class="card-title">Coffe</h2>
                                 <p>Price: $<span>100</span></p>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-primary">Buy Now</button>
+                                    <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
                                 </div>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                                 <h2 class="card-title">Heart</h2>
                                 <p>Price: $<span>105</span></p>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-primary">Buy Now</button>
+                                    <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                 <h2 class="card-title">Panda</h2>
                                 <p>Price: $<span>110</span></p>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-primary">Buy Now</button>
+                                    <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                                 <h2 class="card-title">Umbrella</h2>
                                 <p>Price: $<span>107</span></p>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-primary">Buy Now</button>
+                                    <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
                                 </div>
                             </div>
                         </div>
@@ -107,17 +107,43 @@
                                 <h2 class="card-title">Vue</h2>
                                 <p>Price: $<span>111</span></p>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-primary">Buy Now</button>
+                                    <button class="btn btn-primary" onclick="addToCart(this)">Buy Now</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ... -->
-            <div>Product Cart</div>
+            <!-- Product Cart -->
+            <div>
+                <h1 class="text-center text-4xl pb-4">Product Cart</h1>
+
+                <h2 class="text-center text-2xl pb-4">Total added products <span class="text-blue-500"
+                        id="total-added">0</span></h2>
+                <!-- table  -->
+                <div class="overflow-x-auto">
+                    <table class="table w-full">
+                        <!-- head -->
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart">
+                            <tr>
+                                <!-- <th>1</th>
+                                <td>Cy Ganderton</td>
+                                <td>Blue</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
+    <script src="js/shopping.js"></script>
 </body>
 
 </html>
